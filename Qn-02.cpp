@@ -25,17 +25,10 @@ class Time
         }
         void normalized()
         {
-            if (s>60)
-            {
-                s = s-60 ;
-                m++ ; 
-            }
-
-            if(m>60)
-            {
-                m = m-60 ;
-                h++;
-            }
+            m = m+s/60 ;
+            s = s%60 ;
+            h = h+m/60 ;
+            m = m%60 ;
         }
         Time add (Time t)
         {
