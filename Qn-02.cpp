@@ -36,7 +36,7 @@ class Time
             temp.h = h + t.h ;
             temp.m = m + t.m ;
             temp.s = s + t.s ;
-
+            temp.normalized() ;
             return temp ;
         }
 } ;
@@ -46,15 +46,12 @@ int main ()
     Time t1,t2,t3 ;
 
     t1.setData(9,31,45);
-    t1.normalized();
     t1.showData();
 
     t2.setData(3,9,18) ;
-    t2.normalized();
     t2.showData() ;
 
     t3 = t1.add(t2) ;
-    t3.normalized();
     t3.showData() ;
 
     return 0 ;
